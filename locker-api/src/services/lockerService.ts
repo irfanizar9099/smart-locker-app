@@ -1,3 +1,5 @@
+import { InMemoryLockerRepository } from "../repositories/inMemoryLockerRepository";
+import { LockerRepository } from "../repositories/lockerRepository";
 import {
   Locker,
   LockerSize,
@@ -6,16 +8,14 @@ import {
   StorePackageRequest,
   StoredPackage,
 } from "../types/lockerParams";
-import { InMemoryLockerRepository } from "../repositories/inMemoryLockerRepository";
-import { LockerRepository } from "../repositories/lockerRepository";
 import {
-  RandomPickupCodeGenerator,
   PickupCodeGenerator,
+  RandomPickupCodeGenerator,
 } from "./codeGenerator";
 import {
   StorageChargeCalculator,
-  TieredStorageChargeCalculator,
   StorageChargeDetails,
+  TieredStorageChargeCalculator,
 } from "./storageCalculator";
 
 const lockerSizeOrder: Record<LockerSize, number> = {

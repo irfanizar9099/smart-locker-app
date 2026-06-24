@@ -1,13 +1,13 @@
 import assert = require("assert");
 
-import { LockerService } from "../services/lockerService";
 import { LockerRepository } from "../repositories/lockerRepository";
-import { Locker, LockerSize } from "../types/lockerParams";
 import { PickupCodeGenerator } from "../services/codeGenerator";
+import { LockerService } from "../services/lockerService";
 import {
   StorageChargeCalculator,
   TieredStorageChargeCalculator,
 } from "../services/storageCalculator";
+import { Locker, LockerSize } from "../types/lockerParams";
 
 class FakeLockerRepository implements LockerRepository {
   constructor(private readonly lockers: Locker[]) {}

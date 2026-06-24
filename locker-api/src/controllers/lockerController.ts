@@ -1,10 +1,10 @@
+import { Request, Response } from "express";
 import {
   checkStorageChargePreview,
   getAllLockers as getAllLockersFromService,
   retrievePackageFromLocker,
   storePackageInLocker,
 } from "../services/lockerService";
-import { Request, Response } from "express";
 import {
   LockerSize,
   RetrievePackageRequest,

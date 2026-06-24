@@ -1,6 +1,6 @@
-import lockerRoutes from "./routes/routes";
 import cors from "cors";
 import express from "express";
+import lockerRoutes from "./routes/routes";
 
 const app = express();
 

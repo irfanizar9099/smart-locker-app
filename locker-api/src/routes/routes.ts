@@ -1,10 +1,10 @@
+import { Router } from "express";
 import {
+  checkCharge,
   getAllLockers,
   retrievePackage,
   storePackage,
-  checkCharge,
 } from "../controllers/lockerController";
-import { Router } from "express";
 
 const router = Router();
 

@@ -1,5 +1,5 @@
-import "./polyfills/objectHasOwn";
 import app from "./app";
+import "./polyfills/objectHasOwn";
 
 const PORT = 5000;
 
