@@ -1,0 +1,85 @@
+export const currencySyntax = { RM: "RM" };
+
+export const messageSyntax = {
+  chooseLocker: "Choose a locker from the layout above or enter ID manually",
+  customerNameValidation: "Enter customer name",
+  emailPlaceHolder: "name@example.com",
+  emailValidation: "Please enter a valid email address.",
+  enterAmountToPay: "Enter Amount to Pay",
+  enterPickupCode: "Please enter the pickup code",
+  lockerLabel: "Selected locker:",
+  lockerOccupied: "Selected locker is occupied. Please choose another locker.",
+  phoneNoPlaceHolder: "+60 12-345 6789",
+  phoneValidation: "Please enter a valid phone number.",
+  retrieveLockerError: "Failed to retrieve package",
+  retrieveLockerSuccess: "Package retrieved successfully!",
+  selectLocker: "Please select a locker to store the package.",
+  selectPaymentMethod: "Please select a payment method",
+  showLockerLayout: "Selected from layout",
+  storeError: "Failed to store package",
+  storeSuccess: "Package stored successfully!",
+};
+
+export const packageStatusSyntax = {
+  available: "AVAILABLE",
+  large: "Large",
+  largeDesc: "Large packages & boxes",
+  mdDesc: "Medium-sized packages",
+  medium: "Medium",
+  occupied: "OCCUPIED",
+  small: "Small",
+  smDesc: "Compact parcels & envelopes",
+  unknown: "UNKNOWN",
+};
+
+export const paymentSyntax = {
+  cash: "Cash",
+  creditCard: "Credit Card",
+  debitCard: "Debit Card",
+  defaultAmount: "0.00",
+  eWallet: "E-Wallet",
+  failedCharge: "Failed to check charge",
+  onlineBanking: "Online Banking",
+  paymentError: "Please enter the payment amount",
+  selectPayment: "Please select a payment method",
+};
+
+export const processingSyntax = {
+  checking: "Checking...",
+  checkingCharge: "Checking Charge...",
+  confirming: "Confirming...",
+  confirmAndRetrieve: "Confirm & Retrieve",
+  loadingLockers: "Loading Lockers...",
+  retrieving: "Retrieving...",
+  storing: "Storing...",
+};
+
+export const syntax = {
+  available: "Available",
+  back: "Back",
+  cancel: "Cancel",
+  confirm: "Confirm",
+  confirmPayment: "Confirm Payment",
+  confirmRetrieval: "Confirm Retrieval",
+  customer: "Customer",
+  customerName: "Customer Name",
+  days: "Days",
+  deliveryAgent: "Delivery Agent",
+  emailAddress: "Email Address",
+  lockerId: "Locker ID",
+  occupied: "Occupied",
+  packageSize: "Package Size",
+  pay: "Pay",
+  phoneNumber: "Phone Number",
+  pickupCode: "Pickup Code",
+  ratePerDay: "Rate per Day",
+  retrievePackage: "Retrieve Package",
+  selected: "Selected",
+  selectedPaymentMethod: "Selected Payment Method",
+  storageCharges: "Storage Charges",
+  storePackage: "Store Package",
+  subtotal: "Subtotal",
+  systemSubtitle: "Smart Locker",
+  systemTitle: "Smart Package Locker Management",
+  total: "Total",
+};
