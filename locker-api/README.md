@@ -2,34 +2,21 @@
 
 ## Approach
 
-- Applied a layered structure to separate concerns:
-  - `repositories/` for locker data access
-  - `services/` for business logic and domain rules
-  - `controllers/` for HTTP input validation and response mapping
-- Introduced class-based services with dependency injection:
-  - `LockerService`
-  - `TieredStorageChargeCalculator`
-  - `RandomPickupCodeGenerator`
-- Kept compatibility wrapper exports in `locker.service.ts` so existing routes/controllers continue working without endpoint changes.
-- Added focused backend tests in `src/tests/locker.service.test.ts` to lock key behavior:
-  - selected locker assignment
-  - smallest-fit fallback
-  - occupied locker rejection
-  - tiered charge calculation
+- Split the API into small parts so each file has a clear job.
+- Kept the main locker logic in service files and data handling in repository files.
+- Left the route and controller flow mostly the same so the existing UI can keep working.
+- Added tests for key cases like locker choice, full locker checks, and storage charge rules.
 
 ## Tradeoffs
 
-- Chose in-memory repository (`InMemoryLockerRepository`) for simplicity and low setup cost.
-- Kept mutable locker state in memory to preserve current runtime behavior; this is not durable across process restarts.
-- Kept controller shape mostly unchanged for low migration risk, at the cost of still using lightweight request typing.
-- Added abstractions now to make future DB/storage migration easier, even though it introduces a bit more file count and indirection.
+- Used in-memory storage because it is simple and quick to set up.
+- Locker data is lost when the server restarts because there is no database yet.
+- Kept most controller code close to the old flow to reduce breakage.
+- Added more structure now to make future changes easier, even if it means a few extra files.
 
 ## Assumptions
 
-- This project is currently single-process and does not require distributed locking.
-- Existing API contracts should remain stable for the current UI.
-- Tiered pricing rules are fixed as:
-  - Days 1-5: RM 5/day
-  - Days 6-10: RM 10/day
-  - Days 11+: RM 15/day
-- Locker selection from UI should be honored when `lockerId` is provided in store requests.
+- The app runs in one server only.
+- The current API responses should stay the same so the UI keeps working.
+- Storage charges are fixed at RM 5 for days 1 to 5, RM 10 for days 6 to 10, and RM 15 after that.
+- If the UI sends a locker ID, the API should use that locker when possible.
