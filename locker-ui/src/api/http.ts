@@ -1,10 +1,10 @@
 import {
+  ChargePreviewResponse,
   LockerApiResponse,
   RetrievePackageRequest,
   RetrievePackageResponse,
   StorePackageRequest,
   StorePackageResponse,
-  ChargePreviewResponse,
 } from "../types/locker";
 
 const API_URL = "http://localhost:5000";

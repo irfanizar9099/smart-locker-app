@@ -1,5 +1,5 @@
-import { Locker } from "../types/locker";
 import type { CSSProperties } from "react";
+import { Locker } from "../types/locker";
 import { processingSyntax, syntax } from "./Constant";
 
 interface LockerDashboardProps {

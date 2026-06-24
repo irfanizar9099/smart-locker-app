@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { storePackage } from "../api/http";
 import { Locker, StorePackageRequest } from "../types/locker";
-import PackageSizeSelect from "./PackageSizeSelect";
-import { EMAIL_REGEX, PHONE_REGEX } from "./Regex";
 import {
   messageSyntax,
   packageStatusSyntax,
   processingSyntax,
   syntax,
 } from "./Constant";
+import PackageSizeSelect from "./PackageSizeSelect";
+import { EMAIL_REGEX, PHONE_REGEX } from "./Regex";
 
 interface StorePackageFormProps {
   onSuccess: () => void | Promise<void>;
